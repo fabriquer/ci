@@ -46,6 +46,7 @@
     publishers:
       - archive:
           artifacts: 'bootstrap/{format}/bin/fab,bootstrap/{format}/lib/fabrique/*'
+      - scan-clang-warnings
 
 
 #
@@ -81,6 +82,8 @@
 
     publishers:
       - archive: {artifacts: 'build/bin/fab, build/lib/fabrique/*'}
+      - publish-junit-results
+      - scan-clang-warnings
 
 
 #
