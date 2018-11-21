@@ -16,7 +16,9 @@
 - job-group:
     name: 'build'
     jobs: ['{prefix}{branch}']
-    branch: [antlr, master]
+    branch:
+      - antlr
+      - master
 
 
 #
