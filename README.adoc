@@ -1,0 +1,25 @@
+= Fabrique CI configuration
+
+We use
+http://docs.openstack.org/infra/jenkins-job-builder[Jenkins Job Builder]
+to manage our Continuous Integration setup.
+
+
+== Setup
+
+To set up Fabrique jobs on your Jenkins instance:
+
+* copy `jenkins_jobs.ini.sample` to `jenkins_jobs.ini` and customize
+  the following fields:
+
+  `url`::
+  Full URL to your Jenkins instance (e.g., https://server.example.com/jenkins/)
+
+  `user`::
+  your Jenkins username
+
+  `password`::
+  API token generated from https://server.example.com/jenkins/me/configure
+
+* run `make check` to test the configuration
+* run `make upload` to actually upload the new job configurations
