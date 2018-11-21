@@ -80,7 +80,7 @@
       - shell: ninja -C build
 
     publishers:
-      - archive: {artifacts: 'bootstrap/bin/fab, bootstrap/lib/fabrique/*'}
+      - archive: {artifacts: 'build/bin/fab, build/lib/fabrique/*'}
 
 
 #
