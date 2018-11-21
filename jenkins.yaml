@@ -64,7 +64,8 @@
           basedir: src
           submodule: {disable: false}
 
-    triggers: [github]
+    triggers:
+        reverse: {jobs: '{prefix}bootstrap-ninja'}
 
     builders:
       - github-notifier
