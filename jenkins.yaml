@@ -70,11 +70,11 @@
       - github-notifier
 
       - copyartifact:
-          project: '{prefix}bootstrap-make'
+          project: '{prefix}bootstrap-ninja'
           which-build: last-successful
           fallback-to-last-successful: true
 
-      - shell: rm -rf build && mkdir build && cd build && ../bootstrap/make/bin/fab ../src
+      - shell: rm -rf build && mkdir build && cd build && ../bootstrap/ninja/bin/fab ../src
       - shell: ninja -C build
 
     publishers:
