@@ -78,7 +78,8 @@
           fallback-to-last-successful: true
 
       - shell: rm -rf build && mkdir build && cd build && ../bootstrap/ninja/bin/fab ../src
-      - shell: ninja -C build
+      - shell: ninja -C build everything
+      - shell: ninja -C build test || true
 
     publishers:
       - archive: {artifacts: 'build/bin/fab, build/lib/fabrique/*'}
