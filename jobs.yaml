@@ -85,6 +85,7 @@
       - archive: {artifacts: 'build/bin/fab, build/lib/fabrique/*'}
       - publish-junit-results
       - scan-clang-warnings
+      - junit: {results: 'build/junit.xml'}
 
 
 #
@@ -121,8 +122,3 @@
     publishers:
       - warnings:
           console-log-parsers: ['Clang (LLVM based)']
-
-- publisher:
-    name: publish-junit-results
-    publishers:
-      - junit: {results: 'build/junit.xml'}
