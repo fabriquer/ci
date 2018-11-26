@@ -125,4 +125,4 @@
 - publisher:
     name: publish-junit-results
     publishers:
-      - junit: {results: 'test-report.xml'}
+      - junit: {results: 'build/junit.xml'}
